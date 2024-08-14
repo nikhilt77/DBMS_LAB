@@ -5,7 +5,7 @@ CREATE TABLE `CATEGORY` (
   `DP` int(11) DEFAULT NULL,
   `SUB` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`C_ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+);
 
 INSERT INTO `CATEGORY` (`C_ID`, `C_NAME`, `CSTATUS`, `DP`, `SUB`) VALUES
 (102, 'Home Goods', 'Active', 25, 'Furniture'),
