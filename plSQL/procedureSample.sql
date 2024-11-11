@@ -3,7 +3,7 @@ CREATE TABLE example_table (
     name VARCHAR(20)
 );
 /
-CREATE OR REPLACE PROCEDURE insert_tuple (p_id INT,name varchar) AS
+CREATE OR REPLACE PROCEDURE insert_table (p_id INT,name varchar) AS
 BEGIN
     INSERT INTO example_table (id, name) VALUES (p_id, name);
 END;
@@ -12,10 +12,11 @@ DECLARE
     user_id INT := 2; 
     name VARCHAR2(20) := 'yyy';
 BEGIN
-    insert_tuple(user_id,name);
+    insert_table(user_id,name);
 END;
 /
-//USING CURSORS
+
+--USING CURSORS
 DECLARE
 	CURSOR cur_ex is
 	SELECT * from example_table;
